@@ -9,6 +9,6 @@ var app = builder.Build();//testando o comite
 
 app.MapGet("/", () => "Hello World,let's get it aaaa");
 app.MapGet("/", () => "Teste na api,criando....");
-
+app.MapGet("/", () => "Teste 04/05/24");
 app.Run();
 
