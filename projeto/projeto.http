@@ -1,6 +1,62 @@
-@projeto_HostAddress = http://localhost:5081
 
-GET {{projeto_HostAddress}}/weatherforecast/
+### Cadastrando o paciente
+POST http://localhost:5081/api/paciente/cadastrar
+Content-Type: application/json
+//Accept: application/json
+
+{
+    "Nome" : "Miria",
+    "CPF"  : "123",
+    "Orgao": "Rim",
+    "TipoSanguineo": "O+"
+}
+
+### Listando a lista de pacientes
+GET http://localhost:5081/api/paciente/listar
+
+### Alterar o cadastro de paciente
+PUT http://localhost:5081/api/paciente/alterar/1
+Content-Type: application/json
 Accept: application/json
 
-###
+{
+    "Nome" : "TESTEPaciente2",
+    "CPF"  : "TESTE",
+    "Orgao": "TESTE",
+    "TipoSanguineo": "TESTE"
+}
+
+### Delatando o cadastro do paciente
+DELETE http://localhost:5081/api/paciente/remover/4
+
+//Orgãos
+
+### Cadastrando o orgão
+POST http://localhost:5081/api/orgao/cadastrar
+Content-Type: application/json
+// Accept: application/json
+
+{
+    "Nome": "Coração",
+    "DataRecebimento": "2024-05-19T12:13:00",
+    "TipoSanguineo": "A+"
+}
+
+###Listando os orgãos
+GET http://localhost:5081/api/orgao/listar
+
+### Alterando o cadastro do orgão
+PUT http://localhost:5081/api/orgao/alterar/5
+Content-Type: application/json
+Accept: application/json
+
+{
+    "Nome" : "TESTEÓrgão",
+    "DataRecebimento"  : "2024-05-19T12:12:54",
+    "TipoSanguineo": "TESTEÓrgão"
+}
+
+### Removendo o cadastro de orgão
+DELETE http://localhost:5081/api/orgao/remover/5
+
+
